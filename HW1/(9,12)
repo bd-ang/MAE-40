@@ -1,0 +1,23 @@
+%% Exercise 9.12a
+a =(tf([1], [1 1]))
+bode(a)
+
+%% Exercise 9.12b
+b = tf([1 -1], [1])
+bode(b)
+
+%% Exercise 9.12c
+c = tf([1 -1],[1 1])
+bode(c)
+
+%% Exercise 9.12d
+d = tf([1 101 100], [1 0])
+bode (d)
+
+%% Exercise 9.12e
+e = tf([1 0], [1 101 100])
+bode(e)
+
+%% Exercise 9.12f
+f = tf([1], [1 1 1])
+bode(f)
