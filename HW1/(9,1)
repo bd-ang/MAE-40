@@ -1,1 +1,27 @@
+%% Exercise 9.1(1)
+s = tf('s'); 
+sys = exp(-0.1*s);
+sysx = pade (sys,1)
+pade(0.1,1)
+a = pzplot(sysx)
 
+%% Exercise 9.1(2)
+s = tf('s'); 
+sys = exp(-0.1*s);
+sysx = pade (sys,2)
+pade(0.1,2)
+b = pzplot(sysx)
+
+%% Exercise 9.1(4)
+s = tf('s'); 
+sys = exp(-0.1*s);
+sysx = pade (sys,4)
+pade(0.1,4)
+c = pzplot(sysx)
+
+%% Exercise 9.1(8)
+s = tf('s'); 
+sys = exp(-0.1*s);
+sysx= pade (sys,8)
+pade(0.1,8)
+d = pzplot(sysx)
