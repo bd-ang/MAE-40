@@ -1,23 +1,29 @@
 %% Exercise 9.12a
-a =(tf([1], [1 1]))
+a =(tf([1], [1 1]));
 bode(a)
+string("improper")
 
 %% Exercise 9.12b
-b = tf([1 -1], [1])
+b = tf([1 -1], [1]);
 bode(b)
+"strictly proper"
 
 %% Exercise 9.12c
-c = tf([1 -1],[1 1])
+c = tf([1 -1],[1 1]);
 bode(c)
+"semi proper"
 
 %% Exercise 9.12d
-d = tf([1 101 100], [1 0])
+d = tf([1 101 100], [1 0]);
 bode (d)
+"strictly proper"
 
 %% Exercise 9.12e
 e = tf([1 0], [1 101 100])
 bode(e)
+"improper"
 
 %% Exercise 9.12f
-f = tf([1], [1 1 1])
+f = tf([1], [1 1 1]);
 bode(f)
+"improper"
