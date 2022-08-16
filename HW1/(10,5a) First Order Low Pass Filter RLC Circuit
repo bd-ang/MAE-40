@@ -1,5 +1,5 @@
 %% Exercise 10.5a
 a = tf([1], [1 0.5 1])
 bode(a)
-cutoff = 1
+cutoff = 1/(2*pi*0.5)
 damping=0.5
