@@ -1,0 +1,12 @@
+%% Problem 1
+syms s V0 V1 V2 Ra Cb Cc Rd I0 Ia Ib Ic Id 
+eqn1 = I0 == Ia + Ib;
+eqn2 = Ib == Ic +Id;
+eqn3 = Ia + Ic == 0;
+eqn4 = V0 - V1 == Ia * Ra;
+eqn5 = Ib == Cb * s * (V0 - V2);
+eqn6 = Ic == Cc * s * (V2 - V1);
+eqn7 = V2 == Id * Rd;
+SOL = solve(eqn1,eqn2,eqn3,eqn4,eqn5,eqn6,eqn7,V0,V2,I0,Ia,Ib,Ic,Id)
+V0 = SOL.V0
+x = V1/V0
