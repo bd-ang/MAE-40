@@ -1,0 +1,13 @@
+%% Problem 3a
+syms V0 V1 V2 V3 V_ IR I1 I2 I3 R M1 M2 M3 va vb vc vp If Ia Ib Ic r ma mb mc f
+A=[1 0 -R 0 0 0 0 0 0 0;
+   0 1 0 0 0 0 -r/abs(f) 0 0 0;
+   0 0 1 -1 -1 -1 0 0 0 0;
+   1 0 0 R/M1 0 0 0 0 0 0;
+   1 0 0 0 R/M2 0 0 0 0 0;
+   1 0 0 0 0 R/M3 0 0 0 0;
+   0 0 0 0 0 0 1 -1 -1 -1;
+   0 1 0 0 0 0 0 r/ma 0 0;
+   0 1 0 0 0 0 0 0 r/mb 0;
+   0 1 0 0 0 0 0 0 0 r/mc;]
+b=[V0; 0; 0; V1; V2; V3; 0; va; vb; vc]; x=A\b
