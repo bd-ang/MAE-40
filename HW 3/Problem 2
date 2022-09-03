@@ -1,0 +1,10 @@
+%% Problem 2
+syms I1 I2 I3 I4 Io Vin VA VB VC s R1 R2 C3 C4
+eqn1 = I1 + I3 == 0;
+eqn2 = I2 + I4 == 0;
+eqn3 = Vin - VA == I1 * R1;
+eqn4 = I3 == C3 * s * (Vin - VB);
+eqn5 = I4 == C4 * s * (VA - VC);
+eqn6 = VA - VC == I2 * R2;
+SOL = solve(eqn1,eqn2,eqn3,eqn4,eqn5,eqn6,I1,I2,I3,I4,VA,VB,Vin)
+V0 = SOL.Vin
