@@ -1,0 +1,10 @@
+%% Problem 1
+syms V0 VI V_ Vp IR I0 R f A s a
+eqn1 = VI - Vp == IR*R;
+eqn2 = Vp == I0*(R/f);
+% eqn2 = Vp == VI*((R/f)/(R + (R/f)));
+eqn3 = IR == I0;
+eqn4 = V0 == ((A*a)/(s + a))*(Vp - V_);
+SOL = solve(eqn1,eqn2,eqn3,eqn4,V0,Vp,V_,IR)
+V0 = SOL.V0
+% x=V0/VI
